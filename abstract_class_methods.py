@@ -1,3 +1,4 @@
+#Abstract Class & Methods in Python
 from abc import ABC, abstractmethod
 class food(ABC):
     @abstractmethod
