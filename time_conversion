@@ -1,10 +1,9 @@
 #Time Conversions
-
-def timeConversion(s):
-    if "AM" in s and s[:2] == "12" in s:
-        time = "00" + s[2:8]
+def time_conversion(s):
+    if 'AM' in s and s[:2] == '12':
+        time = '00' + s[2:8]
         return time
-    elif int(s[:2]) < 12 and "PM" in s:
+    elif 'PM' in s and int(s[:2]) < 12:
         time = str(12 + int(s[:2])) + s[2:8]
         return time
     else:
@@ -12,5 +11,5 @@ def timeConversion(s):
         return time
     
 s = input('Enter a time: ')
-my_time = timeConversion(s)
+my_time = time_conversion(s)
 print(my_time)
